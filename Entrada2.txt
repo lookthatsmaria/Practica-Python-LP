@@ -1,0 +1,26 @@
+// Esto es un comentario
+PROC sm(x, y) IS
+    sum := x + y
+    << sum
+    IF sum < 25 THEN
+        sm(y+2-3,y+1)
+        sum := sum+1
+    END
+END
+
+PROC main() IS
+    a1 := 1 + 2
+    b := a1 * 2
+    sm(a1, b)
+    >> c
+    IF c > 5 THEN
+        << c
+    ELSE
+        IF c > 3 THEN
+            << c*10
+        END
+    END
+    FOR i FROM 1 TO 5 DO
+        i := i + 1 << i
+    END
+END

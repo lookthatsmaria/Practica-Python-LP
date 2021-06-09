@@ -1,0 +1,30 @@
+PROC quadrat_blau(mida) IS
+    color(0.2, 0.2, 1)
+    FOR i FROM 1 TO 4 DO
+        forward(mida)
+        left(90)
+    END
+END
+
+// Programa de demostracio en Logo3D.
+
+PROC cercle(mida, costats) IS
+    FOR i FROM 1 TO costats DO
+        forward(mida)
+        left(360 / costats)
+    END
+END
+
+PROC espiral(cercles) IS
+    IF cercles > 0 THEN
+        cercle(1, 12)
+        up(3+2)
+        espiral(cercles - 1)
+    END
+    home()
+    quadrat_blau(5)
+END
+
+PROC main() IS
+    espiral(5)
+END

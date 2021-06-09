@@ -1,0 +1,26 @@
+// Programa principal.
+
+PROC main() IS
+    >> valor1 >> valor2
+    euclides(valor1, valor2)
+    << (-5.2)/2
+    << -2+(3*6)
+    << (-2-3)*6
+    FOR i FROM 1 TO 5
+        DO i := i + 1
+        << i
+    END
+END
+
+// Escriu el mcd de a i de b.
+
+PROC euclides(a, b) IS
+    WHILE a != b DO
+        IF a > b THEN
+            a := a - b
+        ELSE
+            b := b - a
+        END
+    END
+    << a
+END
